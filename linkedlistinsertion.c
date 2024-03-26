@@ -12,13 +12,13 @@ void linkedListTraversal(struct node*ptr){
     }
 }
 // //case 1 insert at the begining 
-// struct node * insertAtFirst(struct node *head, int data){
-//     struct node * ptr = (struct node *) malloc(sizeof(struct node));
-//     ptr->data = data;
+struct node * insertAtFirst(struct node *head, int data){
+    struct node * ptr = (struct node *) malloc(sizeof(struct node));
+    ptr->data = data;
 
-//     ptr->next = head;
-//     return ptr; 
-// }
+    ptr->next = head;
+    return ptr; 
+}
 
 //case 3 insert at the end 
 // struct node * insertAtend(struct node *head, int data){
@@ -36,36 +36,36 @@ void linkedListTraversal(struct node*ptr){
 
 // case 3 insert in between
 
-struct node * insertAtindex(struct node *head, int data,int index){
-    struct node*ptr=(struct node*)malloc(sizeof(struct node));
-    ptr->data=data;
-    struct node *p=head;
-    int i = 0;
+// struct node * insertAtindex(struct node *head, int data,int index){
+//     struct node*ptr=(struct node*)malloc(sizeof(struct node));
+//     ptr->data=data;
+//     struct node *p=head;
+//     int i = 0;
 
-    while (i!=index-1)//aama mostly index 1 j ganay aagal na ni aek 0 ganay
-    //je element jove che teni pachad no element thi aek oocho means aek index occhi
-    {
-        p = p->next;
-        i++;
-    }
-    ptr->data = data;
-    ptr->next = p->next;
-    p->next = ptr;
-    return head;
-}
+//     while (i!=index-1)//aama mostly index 1 j ganay aagal na ni aek 0 ganay
+//     //je element jove che teni pachad no element thi aek oocho means aek index occhi
+//     {
+//         p = p->next;
+//         i++;
+//     }
+//     ptr->data = data;
+//     ptr->next = p->next;
+//     p->next = ptr;
+//     return head;
+// }
 
 // case 4 insert after node
 
-struct node * insertAfternode(struct node *head, struct node *q, int data){
-    struct node * ptr = (struct node *) malloc(sizeof(struct node));
-    ptr->data = data;
+// struct node * insertAfternode(struct node *head, struct node *q, int data){
+//     struct node * ptr = (struct node *) malloc(sizeof(struct node));
+//     ptr->data = data;
 
-    ptr->next = q->next;
-    q->next = ptr;
+//     ptr->next = q->next;
+//     q->next = ptr;
 
     
-    return head;
-}
+//     return head;
+// }
 
 
 int main(){
@@ -98,8 +98,8 @@ fourth=(struct node*)malloc(sizeof(struct node));
 
      linkedListTraversal(head);
     // head=insertAtend(head,56);
-    //   head=insertAtFirst(head,56);
-     head=insertAtindex(head,56,1);
+      head=insertAtFirst(head,56);
+    //  head=insertAtindex(head,56,1);
     // head=insertAfternode(head,third,56);
 
       linkedListTraversal(head);

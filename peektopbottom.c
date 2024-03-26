@@ -52,18 +52,18 @@ int pop(struct node*tp){
         return x;
     }
 }
-// int peek(int pos){
-//     struct node* ptr=top;
-//     for(int i=0;(i<pos-1 && ptr!=NULL);i++){
-//         ptr=ptr->next;
-//     }
-//     if(ptr!=NULL){
-//         return ptr->data;
-//     }
-//     else{
-//         return -1;
-//     }
-// }
+int peek(int pos){
+    struct node* ptr=top;
+    for(int i=0;(i<pos-1 && ptr!=NULL);i++){
+        ptr=ptr->next;
+    }
+    if(ptr!=NULL){
+        return ptr->data;
+    }
+    else{
+        return -1;
+    }
+}
 int stackbottom(){
    struct node*ptr=top;
     while(ptr!=NULL){
@@ -78,14 +78,14 @@ top = push(top,18);
 top = push(top,7);
 linkedlisttraversal(top);
 printf("bottom %d\n",);
-// printf("peek position %d",peek(1));
+printf("peek position %d",peek(1));
 
-// for(int i=1;i<=4;i++){
-//     printf("value at position %d\n",i,peek(i));
-// }
+for(int i=1;i<=4;i++){
+    printf("value at position %d\n",i,peek(i));
+}
 
-// int element=pop(top);
-// printf("popped element is%d\n",element);
-// linkedlisttraversal(top);
+int element=pop(top);
+printf("popped element is%d\n",element);
+linkedlisttraversal(top);
 return 0;
 }

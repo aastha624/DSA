@@ -10,7 +10,7 @@ void display(int arr[],int n){
 }
 
 int main(){
-    int arr[100]={1,7,67,78};
+    int arr[100]={1,7,8,78};
     display(arr , 4);
     return 0;
 }

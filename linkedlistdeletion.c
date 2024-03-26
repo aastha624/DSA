@@ -14,13 +14,13 @@ void linkedListTraversal(struct node*ptr){
 
 // //case 1 deletion the first node
 
-// struct node*deletfirst(struct node*head){
-// struct node*ptr=head;
-// head=head->next;
-// free(ptr);
-// return head;
+struct node*deletfirst(struct node*head){
+struct node*ptr=head;
+head=head->next;
+free(ptr);
+return head;
 
-// }
+}
 // //case 3 delet the last index
 // struct node*deletatlast(struct node*head){
 //     struct node*p=head;
@@ -52,21 +52,21 @@ void linkedListTraversal(struct node*ptr){
 
 // case 4 delet a node with a given value
 
-struct node * deleteAtindex(struct node * head, int value){
-    struct node *p = head;
-    struct node *q = head->next;
-    while(q->data!=value && q->next!= NULL)
-    {
-        p = p->next;
-        q = q->next;
-    }
+// struct node * deleteAtindex(struct node * head, int value){
+//     struct node *p = head;
+//     struct node *q = head->next;
+//     while(q->data!=value && q->next!= NULL)
+//     {
+//         p = p->next;
+//         q = q->next;
+//     }
     
-    if(q->data == value){
-        p->next = q->next;
-        free(q);
-    }
-    return head;
-}
+//     if(q->data == value){
+//         p->next = q->next;
+//         free(q);
+//     }
+//     return head;
+// }
 
 int main(){
 
@@ -97,10 +97,10 @@ fourth=(struct node*)malloc(sizeof(struct node));
     fourth->next = NULL;
 
     linkedListTraversal(head);
-    // head=deletfirst(head);
+    head=deletfirst(head);
     // head=deletatlast(head);
     // head=deleteAtindex(head,3);
-    head=deleteAtindex(head,2);
+    // head=deleteAtindex(head,2);
      linkedListTraversal(head);
     return 0;
  }
