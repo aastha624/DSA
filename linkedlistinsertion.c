@@ -11,7 +11,7 @@ void linkedListTraversal(struct node*ptr){
         ptr=ptr->next;
     }
 }
-// //case 1 insert at the begining 
+
 struct node * insertAtFirst(struct node *head, int data){
     struct node * ptr = (struct node *) malloc(sizeof(struct node));
     ptr->data = data;
