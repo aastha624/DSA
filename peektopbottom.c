@@ -77,7 +77,7 @@ top = push(top,15);
 top = push(top,18);
 top = push(top,7);
 linkedlisttraversal(top);
-printf("bottom %d\n",);
+printf("bottom %d\n");
 printf("peek position %d",peek(1));
 
 for(int i=1;i<=4;i++){
